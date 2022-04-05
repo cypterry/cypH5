@@ -1,4 +1,4 @@
-<!DOCTUPE html>
+<!DOCTYPE html>
 <meta charset="utf-8"/>
 <head>
   <title>唐诗一首</title>
