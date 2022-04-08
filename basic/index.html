@@ -13,13 +13,28 @@
       from{opacity:0;}
       to{opacity:100;}
     }
+    p.first{
+      animation:first 2s infinite;
+    }
+    p.second{
+      animation:second 2s infinite;
+    }
+    @keyframes first{
+      0%{opacity:0;}
+      50%{opacity:100;}
+      51%{opacity:0;}
+      100%{opacity:0;}
+    }
+    @keyframes second{
+      0%{opacity:0;}
+      50%{opacity:0;}
+      100%{opacity:100;}
+    }
   </style>
 </head>
 <body>
   <audio src="audio/bg.wav" controls="controls"></audio>
   <h1>静夜思</h1>
-  <p>床前明月光，</p>
-  <p>疑似地上霜。</p>
-  <p>举头望明月，</p>
-  <p>低头思故乡。</p>
+  <p class="first">床前明月光，</p>
+  <p class="second">疑似地上霜。</p>
 </body>

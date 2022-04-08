@@ -1,0 +1,54 @@
+html,body,span {
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+span{
+    font-size:180px;
+    position:absolute;
+    text-align:center;
+    padding-top:50%;
+}
+#c{
+    background:lightgreen;
+    animation:c 2s infinite;
+}
+#x{
+    background:red;
+    animation:x 2s infinite;
+}
+#q{
+    background:yellow;
+    animation:q 2s infinite;
+}
+#d{
+    background:black;
+    color:white;
+    animation:d 2s infinite;
+}
+@keyframes c{
+    0%{opacity:0;}
+    20%{opacity:100;}
+    40%{opacity:0;}
+    100%{opacity:0;}
+}
+@keyframes x{
+    0%{opacity:0;}
+    20%{opacity:0;}
+    40%{opacity:100;}
+    60%{opacity:0;}
+    100%{opacity:0;}
+}
+@keyframes q{
+    0%{opacity:0;}
+    40%{opacity:0;}
+    60%{opacity:100;}
+    80%{opacity:0;}
+    100%{opacity:0;}
+}
+@keyframes d{
+    0%{opacity:0;}
+    60%{opacity:0;}
+    80%{opacity:100;}
+    100%{opacity:0;}
+}
