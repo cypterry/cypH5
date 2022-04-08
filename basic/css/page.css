@@ -7,24 +7,30 @@ span{
     font-size:180px;
     position:absolute;
     text-align:center;
-    padding-top:50%;
+    padding-top:30%;
 }
 #c{
     background:lightgreen;
-    animation:c 2s infinite;
+    animation:c 10s infinite;
 }
 #x{
     background:red;
-    animation:x 2s infinite;
+    animation:x 10s infinite;
 }
 #q{
-    background:yellow;
-    animation:q 2s infinite;
+    background:yellow url(../images/bg.jpg);
+    background-size:100% 100%;
+    animation:q 10s infinite;
 }
 #d{
     background:black;
     color:white;
-    animation:d 2s infinite;
+    animation:d 10s infinite;
+}
+#z{
+    font-size:36px;
+    display:block;
+    animation:z 10s infinite;
 }
 @keyframes c{
     0%{opacity:0;}
@@ -50,5 +56,12 @@ span{
     0%{opacity:0;}
     60%{opacity:0;}
     80%{opacity:100;}
+    100%{opacity:0;}
+}
+@keyframes z{
+    0%{opacity:0;}
+    70%{opacity:0;}
+    80%{opacity:100;}
+    90%{opacity:0;}
     100%{opacity:0;}
 }
