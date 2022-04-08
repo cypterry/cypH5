@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>season</title>
+        <style type="text/css">
+            span{
+                font-size:60px;
+            }
+            #c{
+                background:lightgreen;
+                animation:c 2s infinite;
+            }
+            #x{
+                background:red;
+                animation:x 2s infinite;
+            }
+            #q{
+                background:yellow;
+                animation:q 2s infinite;
+            }
+            #d{
+                background:black;
+                color:white;
+                animation:d 2s infinite;
+            }
+            @keyframes c{
+                0%{opacity:0;}
+                20%{opacity:100;}
+                40%{opacity:0;}
+                100%{opacity:0;}
+            }
+            @keyframes x{
+                0%{opacity:0;}
+                20%{opacity:0;}
+                40%{opacity:100;}
+                60%{opacity:0;}
+                100%{opacity:0;}
+            }
+            @keyframes q{
+                0%{opacity:0;}
+                40%{opacity:0;}
+                60%{opacity:100;}
+                80%{opacity:0;}
+                100%{opacity:0;}
+            }
+            @keyframes d{
+                0%{opacity:0;}
+                60%{opacity:0;}
+                80%{opacity:100;}
+                100%{opacity:0;}
+            }
+        </style>
+    </head>
+    <body>
+        <span id="c">春</span>
+        <span id="x">夏</span>
+        <span id="q">秋</span>
+        <span id="d">冬</span>
+    </body>
+</html>
