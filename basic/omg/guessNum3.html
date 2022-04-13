@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    p{
+      font:30px 黑体;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+<p id="info"></p>
+<p id="pic"></p>
+</body>
+<script>
+  let pan=false;
+  let suiJi = Math.random();
+  suiJi = Math.floor(suiJi*6) + 1;
+  console.info(suiJi);
+  function guess() {
+    if (pan) {
+      return;
+    }
+    let cai = prompt("请输入1-6之间的数字：");
+    if (!Number.isInteger(cai/1)) {
+      document.getElementById("info").innerHTML = "输入有误！"
+      pan=true;
+      return;
+    }
+    let cha = Math.abs(cai - suiJi);
+    let str1, str2;
+    if(cai == suiJi) {
+        str1 = "你猜对了！";
+        str2 = "<img src=\"../images/dice/" + cai + ".jpg\"/>";
+        pan = true;
+      }
+    else {
+        if (cai > suiJi) {
+          if (cha > 1) {
+            str1 = "你猜太大了！";
+            str2 = " ";
+          } else {
+            str1 = "你猜有点大！";
+            str2 = " ";
+          }
+        }
+        else {
+          if (cha > 1) {
+            str1 = "你猜太小了！";
+            str2 = " ";
+          } else {
+            str1 = "你猜有点小！"
+            str2 = " ";
+          }
+        }
+      }
+      document.getElementById("info").innerHTML = str1;
+      document.getElementById("pic").innerHTML = str2;
+    }
+  guess();
+  guess();
+  guess();
+</script>
+</html>

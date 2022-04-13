@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body{
+      font:60px bold Arial;
+      text-align:center;
+      vertical-align:top;
+    }
+  </style>
+</head>
+<body>
+  <p id="message"></p>
+</body>
+<script>
+  let a = Math.random();
+  let c = false;
+  function guess(){
+    if(c){
+      return;
+    }
+    else {
+      let gue = prompt("你猜是几？");
+      let diff = Math.abs(a-gue);
+      if (gue == a) {
+        // document.write("你猜对了！");
+        document.getElementById("message").innerHTML="你猜对了！"+"<img src=\"../images/dice/"+a+".jpg\"/>";
+        // document.write("<img src=\"../images/dice/"+a+".jpg\"/>");
+        c = true;
+      } else if (gue < a) {
+        // document.write("你猜小了!");
+        document.getElementById("message").innerHTML="你猜小了"+diff+"！";
+      } else {
+        // document.write("你猜大了!");
+        document.getElementById("message").innerHTML="你猜大了"+diff+"！";
+      }
+    }
+  }
+  a = Math.ceil(a*6);
+  console.info(a);
+  // document.write(a);
+  // document.write("<img src=\"../images/dice/"+a+".jpg\"/>")
+  guess();
+  guess();
+  guess();
+</script>
+</html>

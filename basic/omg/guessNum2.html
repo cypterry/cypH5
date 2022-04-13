@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body{
+      font:60px bold Arial;
+      text-align:center;
+      vertical-align:top;
+    }
+  </style>
+</head>
+<body>
+  <p id="message"></p>
+</body>
+<script>
+  let a = Math.random();
+  let c = false;
+  function guess(){
+    if(c){
+    }
+    else {
+      let gue = prompt("你猜是几？");
+      let diff = Math.abs(a-gue);
+      if(isNaN(gue)){
+        document.getElementById("message").innerHTML="请输入数字！";
+      }
+      else if(gue < 0 || gue > 6){
+        document.getElementById("message").innerHTML="请输入1-6之间的数字！";
+      }
+      else if(gue%1 != 0){
+        document.getElementById("message").innerHTML="请输入整数！";
+      }
+      else if (gue == a) {
+        // document.write("你猜对了！");
+        document.getElementById("message").innerHTML="你猜对了！"+"<img src=\"../images/dice/"+a+".jpg\"/>";
+        // document.write("<img src=\"../images/dice/"+a+".jpg\"/>");
+        c = true;
+      }
+      else if (gue < a && diff > 1) {
+        // document.write("你猜太小了!");
+        document.getElementById("message").innerHTML="你猜太小了";
+      }
+      else if(gue < a && diff == 1){
+        document.getElementById("message").innerHTML="你猜有点小！"
+      }
+      else if(gue > a && diff > 1){
+        // document.write("你猜大了!");
+        document.getElementById("message").innerHTML="你猜太大了！";
+      }
+      else{
+        document.getElementById("message").innerHTML="你猜有点大！";
+      }
+    }
+  }
+  a = Math.ceil(a*6);
+  console.info(a);
+  // document.write(a);
+  // document.write("<img src=\"../images/dice/"+a+".jpg\"/>")
+  guess();
+  guess();
+  guess();
+  guess();
+  guess();
+  guess();
+  guess();
+  guess();
+</script>
+</html>

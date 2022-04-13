@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>discount</title>
+  <style>
+    body{
+      font:60px 黑体;
+      text-align:center;
+    }
+  </style>
+  <script>
+    function isnum(c){
+      return c%1 === 0;
+    }
+    let price = 10,count = prompt("第几杯？"),totalPrice;
+    if(isNaN(count)){
+      document.write("请输入数字")
+    }
+    else {
+      if (isnum(count)) {
+        if (count % 2 == 0) {
+          totalPrice = count * price * 0.75;
+        } else {
+          totalPrice = (count + 1) * price * 0.75 - price / 2;
+        }
+        document.write("您一共消费了" + totalPrice + "元");
+      } else {
+        document.write("请输入整数")
+      }
+    }
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
