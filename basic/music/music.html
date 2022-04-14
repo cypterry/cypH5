@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #bgmbottom{
+            width:30px;
+            height:30px;
+            background:url(images/music.gif);
+        }
+    </style>
+</head>
+<body>
+    <audio id="bgm" src="bgm/bg.wav" preload="auto" autoplay="autoplay" loop="loop"></audio>
+    <div id="bgmbottom" onclick="control()"></div>
+</body>
+    <script>
+        function control(){
+            if(document.getElementById("bgm").paused) {
+                document.getElementById("bgm").play();
+                document.getElementById("bgmbottom").style.backgroundImage="url(images/music.gif)";
+            }
+            else{
+                document.getElementById("bgm").pause();
+                document.getElementById("bgmbottom").style.backgroundImage="url(images/stop.gif)";
+            }
+        }
+    </script>
+</html>

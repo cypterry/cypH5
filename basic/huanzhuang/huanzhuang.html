@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #shen{
+      width:240px;
+      height:680px;
+      background:url(images/shen.png);
+      position:absolute;
+      top:100px;
+      left:100px;
+    }
+    #mao{
+      width:240px;
+      height:680px;
+      position:absolute;
+    }
+    #glass{
+      width:240px;
+      height:680px;
+      position:absolute;
+    }
+    #shang{
+      width:240px;
+      height:680px;
+      position:absolute;
+      z-index:3;
+    }
+    #xia{
+      width:240px;
+      height:680px;
+      position:absolute;
+      z-index:2
+    }
+    #xie{
+      width:240px;
+      height:680px;
+      position:absolute;
+      z-index:1;
+    }
+    body ul{
+      list-style:none;
+    }
+    body li ul{
+      padding:0;
+    }
+    body>ul>li{
+      float:left;
+      width:80px;
+    }
+    li li:hover,body>ul>li:nth-child(2):hover{
+      background:black;
+      color:white;
+    }
+    li{
+      background:lightblue;
+      border:1px solid white;
+    }
+    li li{
+      display:none;
+    }
+    li:hover li{
+      display:block;
+    }
+    li li:active,body>ul>li:nth-child(2):active{
+      background:white;
+      color:lightblue;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>帽子
+      <ul>
+        <li onclick="mmao()">毛线帽</li>
+        <li onclick="pmao()">皮毛</li>
+      </ul>
+    </li>
+    <li onclick="gl()">眼镜</li>
+    <li>衣服
+      <ul>
+        <li onclick="wy()">卫衣</li>
+        <li onclick="wt()">外套</li>
+        <li onclick="my()">毛衣</li>
+        <li onclick="cf()">冲锋衣</li>
+      </ul>
+    </li>
+    <li>裤子
+      <ul>
+        <li onclick="dq()">短裙</li>
+        <li onclick="zk()">中裤</li>
+        <li onclick="ck()">长裤</li>
+      </ul>
+    </li>
+    <li>鞋子
+      <ul>
+        <li onclick="yd()">运动鞋</li>
+        <li onclick="ds()">登山靴</li>
+        <li onclick="mx()">皮靴</li>
+      </ul>
+    </li>
+  </ul>
+  <div id="shen">
+    <div id="mao"></div>
+    <div id="glass"></div>
+    <div id="shang"></div>
+    <div id="xia"></div>
+    <div id="xie"></div>
+  </div>
+</body>
+<script>
+  function mmao(){
+    document.getElementById("mao").style.backgroundImage="url(images/mao1.png)"
+  }
+  function pmao(){
+    document.getElementById("mao").style.backgroundImage="url(images/mao2.png)"
+  }
+  function gl(){
+    document.getElementById("glass").style.backgroundImage="url(images/glass.png)"
+  }
+  function wy(){
+    document.getElementById("shang").style.backgroundImage="url(images/shang1.png)"
+  }
+  function wt(){
+    document.getElementById("shang").style.backgroundImage="url(images/shang2.png)"
+  }
+  function my(){
+    document.getElementById("shang").style.backgroundImage="url(images/shang3.png)"
+  }
+  function cf(){
+    document.getElementById("shang").style.backgroundImage="url(images/shang4.png)"
+  }
+  function dq(){
+    document.getElementById("xia").style.backgroundImage="url(images/xia1.png)"
+  }
+  function zk(){
+    document.getElementById("xia").style.backgroundImage="url(images/xia2.png)"
+  }
+  function ck(){
+    document.getElementById("xia").style.backgroundImage="url(images/xia3.png)"
+  }
+  function yd(){
+    document.getElementById("xie").style.backgroundImage="url(images/xie1.png)"
+  }
+  function ds(){
+    document.getElementById("xie").style.backgroundImage="url(images/xie2.png)"
+  }
+  function mx(){
+    document.getElementById("xie").style.backgroundImage="url(images/xie3.png)"
+  }
+</script>
+</html>

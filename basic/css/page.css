@@ -18,7 +18,7 @@ span{
     animation:x 10s infinite;
 }
 #q{
-    background:yellow url(../images/bg.jpg);
+    background:yellow url(../console/images/bg.jpg);
     background-size:100% 100%;
     animation:q 10s infinite;
 }
