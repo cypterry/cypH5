@@ -9,7 +9,7 @@
       height:680px;
       background:url(images/shen.png);
       position:absolute;
-      top:100px;
+      top:200px;
       left:100px;
     }
     #mao{
@@ -68,9 +68,16 @@
       background:white;
       color:lightblue;
     }
+    #mp{
+      background:url(../music/images/music.gif);
+      width:30px;
+      height:30px;
+    }
   </style>
 </head>
 <body>
+  <audio id="bgm" src="../music/bgm/bg.wav" autoplay="autoplay" loop="loop"></audio>
+  <div id="mp" onclick="bgmusic()" ></div>
   <ul>
     <li>帽子
       <ul>
@@ -112,43 +119,53 @@
 </body>
 <script>
   function mmao(){
-    document.getElementById("mao").style.backgroundImage="url(images/mao1.png)"
+    document.getElementById("mao").style.backgroundImage="url(images/mao1.png)";
   }
   function pmao(){
-    document.getElementById("mao").style.backgroundImage="url(images/mao2.png)"
+    document.getElementById("mao").style.backgroundImage="url(images/mao2.png)";
   }
   function gl(){
-    document.getElementById("glass").style.backgroundImage="url(images/glass.png)"
+    document.getElementById("glass").style.backgroundImage="url(images/glass.png)";
   }
   function wy(){
-    document.getElementById("shang").style.backgroundImage="url(images/shang1.png)"
+    document.getElementById("shang").style.backgroundImage="url(images/shang1.png)";
   }
   function wt(){
-    document.getElementById("shang").style.backgroundImage="url(images/shang2.png)"
+    document.getElementById("shang").style.backgroundImage="url(images/shang2.png)";
   }
   function my(){
-    document.getElementById("shang").style.backgroundImage="url(images/shang3.png)"
+    document.getElementById("shang").style.backgroundImage="url(images/shang3.png)";
   }
   function cf(){
-    document.getElementById("shang").style.backgroundImage="url(images/shang4.png)"
+    document.getElementById("shang").style.backgroundImage="url(images/shang4.png)";
   }
   function dq(){
-    document.getElementById("xia").style.backgroundImage="url(images/xia1.png)"
+    document.getElementById("xia").style.backgroundImage="url(images/xia1.png)";
   }
   function zk(){
-    document.getElementById("xia").style.backgroundImage="url(images/xia2.png)"
+    document.getElementById("xia").style.backgroundImage="url(images/xia2.png)";
   }
   function ck(){
-    document.getElementById("xia").style.backgroundImage="url(images/xia3.png)"
+    document.getElementById("xia").style.backgroundImage="url(images/xia3.png)";
   }
   function yd(){
-    document.getElementById("xie").style.backgroundImage="url(images/xie1.png)"
+    document.getElementById("xie").style.backgroundImage="url(images/xie1.png)";
   }
   function ds(){
-    document.getElementById("xie").style.backgroundImage="url(images/xie2.png)"
+    document.getElementById("xie").style.backgroundImage="url(images/xie2.png)";
   }
   function mx(){
-    document.getElementById("xie").style.backgroundImage="url(images/xie3.png)"
+    document.getElementById("xie").style.backgroundImage="url(images/xie3.png)";
+  }
+  function bgmusic(){
+    if(document.getElementById("bgm").paused){
+      document.getElementById("bgm").play();
+      document.getElementById("mp").style.backgroundImage="url(../music/images/music.gif)";
+    }
+    else{
+      document.getElementById("bgm").pause();
+      document.getElementById("mp").style.backgroundImage="url(../music/images/stop.gif)";
+    }
   }
 </script>
 </html>
